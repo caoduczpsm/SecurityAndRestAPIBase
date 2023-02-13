@@ -14,37 +14,40 @@ import java.util.Collection;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User implements UserDetails{
-        int id;
+    int id;
 
-        String username;
+    String username;
 
-        String password;
+    String phoneNumber;
 
-        String role;
 
-        @Override
-        public Collection<? extends GrantedAuthority> getAuthorities() {
-            return null;
-        }
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return null;
+    }
 
-        @Override
-        public boolean isAccountNonExpired() {
-            return false;
-        }
+    @Override
+    public String getPassword() {
+        return null;
+    }
 
-        @Override
-        public boolean isAccountNonLocked() {
-            return false;
-        }
+    @Override
+    public boolean isAccountNonExpired() {
+        return false;
+    }
 
-        @Override
-        public boolean isCredentialsNonExpired() {
-            return false;
-        }
+    @Override
+    public boolean isAccountNonLocked() {
+        return false;
+    }
 
-        @Override
-        public boolean isEnabled() {
-            return false;
-        }
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return false;
+    }
 
+    @Override
+    public boolean isEnabled() {
+        return false;
+    }
 }
