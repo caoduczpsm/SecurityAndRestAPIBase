@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/xhtml">
+<head th:insert="fragments.html :: headerfiles"></head>
+<head>
+    <meta charset="UTF-8">
+    <title>Additional Employee Successfully </title>
+
+    <style type="text/css">
+        span{
+            display: inline-block;
+            width: 200px;
+            margin: 5px;
+            text-align: left;
+        }
+    </style>
+
+</head>
+<body align="center">
+
+        <header th:insert="fragments.html :: nav"></header>
+
+        <h1>Successfully</h1>
+
+        <span>Employee Name: </span> <span th:text="${user.username}"></span><br>
+
+        <span>Employee Phone Number: </span> <span th:text="${user.phoneNumber}"></span><br>
+
+</body>
+</html>

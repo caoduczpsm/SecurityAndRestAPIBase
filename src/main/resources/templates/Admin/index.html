@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments.html :: headerfiles">
+
+    <style type="text/css">
+
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none
+        }
+
+    </style>
+
+</head>
+<body>
+<!-- Page content goes here -->
+    <div class="container">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#" th:href="@{~/admin/index}"><i class="fa fa-home"></i>ADMIN HOME</a><br>
+                <a class="nav-link" href="#" th:href="@{~/admin/addition_employee_form}"><i class="fa fa-home"></i>ADD EMPLOY FORM</a><br>
+                <a class="nav-link" href="#" th:href="@{~/admin/update_employee_form}"><i class="fa fa-home"></i>UPDATE EMPLOY FORM</a><br>
+                <a class="nav-link" href="#" th:href="@{~/admin/deleting_employee_form}"><i class="fa fa-home"></i>DELETE EMPLOY FORM</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

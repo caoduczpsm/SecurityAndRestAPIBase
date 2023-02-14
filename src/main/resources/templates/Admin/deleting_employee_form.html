@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/xhtml">
+<head th:insert="fragments.html :: headerfiles"></head>
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Employee</title>
+
+    <style type="text/css">
+        span{
+            display: inline-block;
+            width: 200px;
+            margin: 5px;
+            text-align: left;
+        }
+    </style>
+
+</head>
+<body align="center">
+
+    <header th:insert="fragments.html :: nav"></header>
+
+    <h1 >Delete Employee</h1>
+
+    <form action="#" th:action="@{/admin/deleting_employee_form}" th:object="${user}" th:method="delete">
+
+        <label>Employee name:</label>
+        <input type="text" th:field="*{username}"><br>
+
+        <button type="submit" onclick="/deleteEmployee${*{username}}" >Submit</button>
+    </form>
+
+</body>
+</html>
